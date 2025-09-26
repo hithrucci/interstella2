@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        width: 100%;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+      }
+
+      /*li의 중 첫째 자식을 제외한 모든 li*/
+      li:not(:nth-child(1)) {
+        margin-top: -1px;
+      }
+
+      .title {
+        padding: 5px 0px;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding-left: 20px;
+      }
+      .txt {
+        width: 90%;
+        margin: 10px auto 30px;
+        display: none;
+      }
+      body {
+        background-color: #fff;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="title">title01</div>
+        <div class="txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+          alias ab quae eveniet optio nesciunt quidem perferendis, nisi nulla
+          recusandae delectus obcaecati dicta placeat fuga velit, dolorum minima
+          qui quod.
+        </div>
+      </li>
+      <li>
+        <div class="title">title02</div>
+        <div class="txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+          alias ab quae eveniet optio nesciunt quidem perferendis, nisi nulla
+          recusandae delectus obcaecati dicta placeat fuga velit, dolorum minima
+          qui quod.
+        </div>
+      </li>
+      <li>
+        <div class="title">title03</div>
+        <div class="txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+          alias ab quae eveniet optio nesciunt quidem perferendis, nisi nulla
+          recusandae delectus obcaecati dicta placeat fuga velit, dolorum minima
+          qui quod.
+        </div>
+      </li>
+    </ul>
+
+    <script>
+      $("li").on("click", function () {
+        $("li").not($(this)).find(".txt").slideUp();
+        $(this).find(".txt").slideToggle();
+      });
+
+      //   $("li").on("click", function () {
+      //     let isOn = $(this).hasClass("on");
+      //     if (isOn) {
+      //       $(this).removeClass("on");
+      //       $(this).children(".txt").slideUp();
+      //     } else {
+      //       $("li").removeClass("on");
+      //       $(this).addClass("on");
+      //       $("li .txt").slideUp();
+      //       $(this).children(".txt").slideDown();
+      //     }
+      //   });
+    </script>
+  </body>
+</html>

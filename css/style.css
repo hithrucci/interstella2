@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+body {
+  font-family: "Orbitron", sans-serif;
+}
+/*visual*/
+#visual {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*icons*/
+.icons {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 8%;
+  top: 3%;
+}
+.icons a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+/*h1*/
+h1 {
+  position: absolute;
+  left: 8%;
+  top: 33%;
+}
+/*ul.wrap*/
+
+ul.wrap > li {
+  border-top: 0.5px solid #fff;
+}
+/*title*/
+ul.wrap {
+  background-image: url(../img/bg1blur.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+}
+.title {
+  cursor: pointer;
+  padding: 0px 120px 0px 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(180, 180, 180, 0.2);
+  height: 3rem;
+  line-height: 3rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  /* backdrop-filter: blur(4px); */
+}
+.title.on {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.title h2 {
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.title .arr {
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  font-size: 1.5rem;
+}
+.title .arr i {
+  width: 1.5rem;
+}
+/*bottom*/
+.bottom {
+  padding: 20px 180px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  backdrop-filter: blur(4px);
+  display: none;
+  box-sizing: border-box;
+}
+
+.title.on .arr {
+  animation: toRight 1.5s linear infinite;
+}
+@keyframes toRight {
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: trans;
+  }
+}
+/*.inter*/
+.inter .bottomWrap {
+  display: flex;
+  gap: 2rem;
+}
+.inter .bottomWrap img {
+  width: 22rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.bottomWrap {
+  padding: 30px;
+}
+/*.synopsis*/
+.synopsis .bottomWrap {
+  overflow: hidden;
+  width: 100%;
+  background-image: url(../img/ship2.png);
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center right;
+  overflow-y: scroll;
+  height: 180px;
+}
+
+.synopsis .bottom h3 {
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  margin-bottom: 30px;
+}
+.synopsis .bottom p {
+  margin: 20px 0px;
+  width: 80%;
+}
+
+/*.characters*/
+
+.characters .bottom h3 {
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  margin-bottom: 30px;
+}
+.characters .bottom .pic {
+  display: flex;
+  gap: 20px;
+}
+.characters .bottom .pic li {
+  width: calc(100% / 5);
+  height: 100%;
+}
+.characters .bottom .pic li img {
+  width: 180px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #333;
+}
+.characters .bottom .name {
+  margin: 18px 0px 8px;
+  font-weight: bold;
+}
+.characters .bottom .position {
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+}
+/*.gallery*/
+
+.gallery .bottom h3 {
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  margin-bottom: 30px;
+}
+.gallery .bottom .pic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.gallery .bottom .pic li {
+  width: calc(100% / 5 - 24px);
+  height: 120px;
+}
+.gallery .bottom .pic li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #333;
+}
+/*comments*/
+.comments .bottomWrap {
+  display: flex;
+  gap: 30px;
+  height: 300px;
+}
+.comments h3 {
+  color: #333;
+  width: 20%;
+}
+.comments .insert {
+  width: calc(60% - 15px);
+}
+.comments .insert .top {
+  border: 1px solid #333;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.comments .insert .bottom_in {
+  border: 1px solid #333;
+  width: 100%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: 20px;
+}
