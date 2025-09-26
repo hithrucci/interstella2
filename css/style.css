@@ -40,11 +40,6 @@ h1 {
   left: 8%;
   top: 33%;
 }
-/*ul.wrap*/
-
-ul.wrap > li {
-  border-top: 0.5px solid #fff;
-}
 /*title*/
 ul.wrap {
   background-image: url(../img/bg1blur.jpg);
@@ -56,6 +51,11 @@ ul.wrap {
   bottom: 80px;
   width: 100%;
 }
+ul.wrap > li {
+  border-top: 0.5px solid #fff;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
 .title {
   cursor: pointer;
   padding: 0px 120px 0px 180px;
@@ -65,13 +65,10 @@ ul.wrap {
   background-color: rgba(180, 180, 180, 0.2);
   height: 3rem;
   line-height: 3rem;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  /* backdrop-filter: blur(4px); */
-}
-.title.on {
+} /* .title.on {
   background-color: rgba(255, 255, 255, 0.4);
-}
+} */
+
 .title h2 {
   color: #fff;
   text-shadow: 1px 1px 3px #000;
@@ -87,24 +84,23 @@ ul.wrap {
 }
 /*bottom*/
 .bottom {
-  padding: 20px 180px;
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  backdrop-filter: blur(4px);
+  padding: 2px 160px;
+  background-color: rgba(180, 180, 180, 0.2);
   display: none;
   box-sizing: border-box;
 }
-
-.title.on .arr {
-  animation: toRight 1.5s linear infinite;
+ul.wrap li.on {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+ul.wrap li.on .arr {
+  animation: toRight 1s alternate infinite;
 }
 @keyframes toRight {
   0% {
-    transform: translateX(-40px);
+    transform: translateX(0px);
   }
   100% {
-    transform: trans;
+    transform: translateX(-20px);
   }
 }
 /*.inter*/
@@ -118,9 +114,6 @@ ul.wrap {
   object-fit: cover;
 }
 
-.bottomWrap {
-  padding: 30px;
-}
 /*.synopsis*/
 .synopsis .bottomWrap {
   overflow: hidden;
@@ -129,8 +122,6 @@ ul.wrap {
   background-size: 20%;
   background-repeat: no-repeat;
   background-position: center right;
-  overflow-y: scroll;
-  height: 180px;
 }
 
 .synopsis .bottom h3 {
@@ -138,9 +129,13 @@ ul.wrap {
   text-shadow: 1px 1px 3px #000;
   margin-bottom: 30px;
 }
+.synopsis .bottom .txt {
+  height: 160px;
+  overflow-y: scroll;
+  width: 80%;
+}
 .synopsis .bottom p {
   margin: 20px 0px;
-  width: 80%;
 }
 
 /*.characters*/
@@ -219,4 +214,17 @@ ul.wrap {
   height: 200px;
   background-color: rgba(255, 255, 255, 0.6);
   margin-top: 20px;
+}
+
+/*footer*/
+footer {
+  width: 100%;
+  color: #fff;
+  text-align: right;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  opacity: 0.8;
 }
