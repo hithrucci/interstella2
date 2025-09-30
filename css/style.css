@@ -51,6 +51,7 @@ ul.wrap {
   bottom: 80px;
   width: 100%;
 }
+
 ul.wrap > li {
   border-top: 0.5px solid #fff;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
